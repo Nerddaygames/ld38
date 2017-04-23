@@ -27,7 +27,11 @@ public class SphericalCameraFollow : MonoBehaviour {
 		// move camera to camera node position
 		transform.position = playerCameraNode.position;
 		// try to get the same "up" as player
-		transform.Translate(player.up, Space.Self);
 
+		transform.rotation = player.rotation;
+	
+
+		// causes camera to not follow z rotation correctly, tries to follow world up
+		// transform.LookAt (player.position);
 	}
 }
