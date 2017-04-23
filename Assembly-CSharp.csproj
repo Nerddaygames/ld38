@@ -46,13 +46,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Health.cs" />
-     <Compile Include="Assets\HealthPickup.cs" />
+     <Compile Include="Assets\EnemyController.cs" />
+     <Compile Include="Assets\PlayerProjectile.cs" />
+     <Compile Include="Assets\_MyScripts\Health.cs" />
+     <Compile Include="Assets\_MyScripts\HealthPickup.cs" />
      <Compile Include="Assets\_MyScripts\NodePlayerFollow.cs" />
      <Compile Include="Assets\_MyScripts\PlayerController.cs" />
+     <Compile Include="Assets\_MyScripts\PlayerWeaponGun.cs" />
      <Compile Include="Assets\_MyScripts\ResetLevel.cs" />
      <Compile Include="Assets\_MyScripts\SphericalCameraFollow.cs" />
      <Compile Include="Assets\_MyScripts\SphericalGravity.cs" />
+     <Compile Include="Assets\_MyScripts\WeaponPickup.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -17,6 +17,9 @@ public class SphericalGravity : MonoBehaviour {
 	[SerializeField]
 	private bool gravity = true;
 
+	[SerializeField]
+	private bool lockRotations = true;
+
 	Transform world;
 
 	// Use this for initialization
@@ -27,9 +30,11 @@ public class SphericalGravity : MonoBehaviour {
 		// turn off default gravity
 		rb.useGravity = false;
 		// Thanks for nothing mono(always wondered why it's named after a disease)
-		// stop rigidbody from setting rotations
-		// DUH - not all, just lock rotation
-		rb.constraints = RigidbodyConstraints.FreezeRotation; // FreezeAll;
+		if(lockRotations){
+			// stop rigidbody from setting rotations
+			// DUH - not all, just lock rotation
+			rb.constraints = RigidbodyConstraints.FreezeRotation; // FreezeAll;
+		}
 	}
 
 	

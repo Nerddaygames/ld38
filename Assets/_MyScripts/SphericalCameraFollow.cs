@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SphericalCameraFollow : MonoBehaviour {
+	// adjust x rotation, TODO adjust while jumping
+	[SerializeField]
+	private float xRotation = 12.5f;
 	// ref variable for world position
 	Transform world;
 	// ref variable for player position
@@ -28,7 +31,10 @@ public class SphericalCameraFollow : MonoBehaviour {
 		transform.position = playerCameraNode.position;
 		// try to get the same "up" as player
 
+
 		transform.rotation = player.rotation;
+		// Rotate the object around its local X axis at 1 degree per second
+		transform.Rotate(Vector3.right * xRotation);
 	
 
 		// causes camera to not follow z rotation correctly, tries to follow world up
