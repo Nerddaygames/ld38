@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
 
+	public RectTransform healthBar;
 
 	[SerializeField]
 	private float startingHealth = 100f;
@@ -18,16 +20,18 @@ public class Health : MonoBehaviour {
 	private bool alive;
 
 
+
 	// Use this for initialization
 	void Start () {
 		alive = true;
 		currentHealth = startingHealth;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (alive) {
 			if(currentHealth <= 0){
+				currentHealth = 0;
 				alive = false;
 			}
 		}
@@ -37,6 +41,7 @@ public class Health : MonoBehaviour {
 	public void AddHealth(int amount){
 		if (alive) {
 			currentHealth += amount;
+			healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
 		}
 	}
 
@@ -44,6 +49,8 @@ public class Health : MonoBehaviour {
 	public void TakeHealth(int amount){
 		if (alive) {
 			currentHealth -= amount;
+			Debug.Log ("Update health bar");
+			healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
 		}
 	}
 

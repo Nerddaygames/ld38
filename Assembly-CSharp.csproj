@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EnemyController.cs" />
+     <Compile Include="Assets\HealthBarFollow.cs" />
      <Compile Include="Assets\PlayerProjectile.cs" />
+     <Compile Include="Assets\_MyScripts\Billboard.cs" />
      <Compile Include="Assets\_MyScripts\Health.cs" />
      <Compile Include="Assets\_MyScripts\HealthPickup.cs" />
      <Compile Include="Assets\_MyScripts\NodePlayerFollow.cs" />
